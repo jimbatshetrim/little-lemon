@@ -125,13 +125,17 @@ nav ul li {
     max-width: 20%;
 }
 
+.company-description h2, h3 {
+    color: #495E57;
+}
+
 .company-img img {
     width: 300px;
     border-radius: 1rem;
 }
 
-#secondImg {
-    transform: translate(-100px, -40px);
+#overlapImg {
+    transform: translate(100px, 60px);
 }
 
 footer {
