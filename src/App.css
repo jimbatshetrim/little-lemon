@@ -56,13 +56,15 @@ nav ul li {
     margin-top: 4rem;
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
-.title span {
+.title button {
     font-weight: bold;
-    padding: 0 1rem 0 1rem;
+    padding: 1rem 1rem 1rem 1rem;
     background-color: #F4CE14;
     border-radius: 1rem;
+    border: none;
 }
 
 .cards {
@@ -99,4 +101,14 @@ nav ul li {
     display: flex;
     padding: 0 0 2rem 1rem;
     gap: 1rem;
+}
+
+.price {
+    color: #EE9972;
+}
+
+.card a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
 }

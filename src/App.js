@@ -32,7 +32,9 @@ function App() {
                 <section className="Highlight-section">
                     <div className="title">
                         <h2>This weeks specials!</h2>
-                        <span>Online Menu</span>
+                        <div>
+                            <button>Online Menu</button>
+                        </div>
                     </div>
                     <div className="cards">
                         { ['', '', ''].map(() =>
@@ -41,7 +43,7 @@ function App() {
                                 <div className="card-header"> <span>
                                     Greek Salad
                                 </span>
-                                    <span>
+                                    <span className="price">
                                     $12.99
                                 </span> </div>
                                 <div className="card-description">
