@@ -134,4 +134,18 @@ nav ul li {
     transform: translate(-100px, -40px);
 }
 
+footer {
+    display: flex;
+    font-weight: bold;
+    justify-content: space-evenly;
+    background-color: #495E57;
+    color: #EDEFEE;
+}
+
+footer img {
+    align-self: center;
+    height: 200px;
+    background-color: white;
+    padding: .3rem;
+}
 
