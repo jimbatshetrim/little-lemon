@@ -75,7 +75,7 @@ nav ul li {
 }
 
 .card {
-    border-radius: 1rem 1rem 0 0;
+    border-radius: 1rem;
     background-color: #EDEFEE;
 }
 
@@ -112,3 +112,26 @@ nav ul li {
     font-weight: bold;
     color: black;
 }
+
+.company-info {
+    margin-top: 50px;
+    background-color: #F4CE14;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.company-description {
+    max-width: 20%;
+}
+
+.company-img img {
+    width: 300px;
+    border-radius: 1rem;
+}
+
+#secondImg {
+    transform: translate(-100px, -40px);
+}
+
+
