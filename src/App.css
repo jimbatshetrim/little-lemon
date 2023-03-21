@@ -1,3 +1,102 @@
-.App {
+body {
+    margin: 0;
+    padding: 0;
+}
 
+header {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+.Hero-section {
+    background-color: #495E57;
+    display: flex;
+    justify-content: space-around;
+    padding: .6rem 0;
+}
+
+.Hero-section .description {
+    max-width: 300px;
+    color: #EDEFEE;
+}
+
+.Hero-section h1 {
+    color: #F4CE14;
+}
+
+.card-description {
+    max-width: 200px;
+}
+
+.reserve-btn {
+    background-color: #F4CE14;
+    padding: .3rem .7rem;
+}
+
+.Hero-section img {
+    transform: translateY(55px);
+    width: 250px;
+    height: 300px;
+}
+
+.br {
+    border-radius: 11px;
+}
+
+.title {
+    margin-top: 4rem;
+    display: flex;
+    justify-content: space-around;
+}
+
+.title span {
+    font-weight: bold;
+    padding: 0 1rem 0 1rem;
+    background-color: #F4CE14;
+    border-radius: 1rem;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    padding-top: 2rem;
+}
+
+.card {
+    border-radius: 1rem 1rem 0 0;
+    background-color: #EDEFEE;
+}
+
+.card img {
+    max-width: 250px;
+    object-fit: contain;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.card-header {
+    font-weight: bold;
+    display: flex;
+    justify-content: space-around;
+    padding: .5rem 0;
+}
+
+.card-description {
+    padding: 1rem;
+    color: #495E57;
+}
+
+.card a {
+    display: flex;
+    padding: 0 0 2rem 1rem;
+    gap: 1rem;
 }
