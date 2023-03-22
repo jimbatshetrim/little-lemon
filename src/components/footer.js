@@ -1,5 +1,7 @@
 import React from 'react';
 import footerLogo from './../assets/footer-logo.png'
+import {NAVIGATION} from '../misc/constant';
+import {Link} from 'react-router-dom';
 
 function Footer() {
 	return (
@@ -8,8 +10,8 @@ function Footer() {
 			<div className="navigation">
 				<h3>Navigation</h3>
 				{
-					['Home', 'About', 'Menu', 'Reservations', 'Order Online', 'Login'].map(
-						menu => <p>{menu}</p>
+					NAVIGATION.map(
+						menu => <p key={menu.id}><Link to={menu.link}>{menu.label}</Link></p>
 					)
 				}
 			</div>
