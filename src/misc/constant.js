@@ -17,7 +17,7 @@ export const NAVIGATION = [
 	{
 		id: 3,
 		label: 'Reservations',
-		link: '/reservation'
+		link: '/reservations'
 	},
 	{
 		id: 4,
