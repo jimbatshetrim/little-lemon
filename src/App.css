@@ -114,6 +114,7 @@ nav ul li {
 }
 
 .company-info {
+    padding: 2rem;
     margin-top: 50px;
     background-color: #F4CE14;
     display: flex;
@@ -135,7 +136,7 @@ nav ul li {
 }
 
 #overlapImg {
-    transform: translate(100px, 60px);
+    transform: translate(100px, 30px);
 }
 
 footer {
