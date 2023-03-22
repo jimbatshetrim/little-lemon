@@ -1,21 +1,18 @@
 import './App.css';
-import Header from './components/header';
-import Hero from './components/hero';
-import Highlights from './components/highlights';
-import CompanyInfo from './components/companyInfo';
-import Footer from './components/footer';
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
+import Layout from './components/layout';
+import Homepage from './components/homepage';
 
 function App() {
     return (
-        <div className="App">
-            <Header/>
-            <main>
-                <Hero/>
-                <Highlights/>
-                <CompanyInfo/>
-            </main>
-            <Footer/>
-        </div>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Layout/>}>
+                    <Route index element={<Homepage/>}/>
+
+                </Route>
+            </Routes>
+        </BrowserRouter>
     );
 }
 

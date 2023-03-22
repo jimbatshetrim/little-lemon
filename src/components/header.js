@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from './../assets/Logo.svg';
+import {Link} from 'react-router-dom';
 
 function Header() {
 	return (
@@ -9,7 +10,7 @@ function Header() {
 				<ul>
 					{
 						['Home', 'About', 'Menu', 'Reservations', 'Order Online', 'Login'].map(
-							menu => <li>{menu}</li>
+							menu => <li><Link to={'/reservations'}>{menu}</Link></li>
 						)
 					}
 				</ul>
