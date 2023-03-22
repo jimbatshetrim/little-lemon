@@ -1,6 +1,7 @@
 import React from 'react';
 import logo from './../assets/Logo.svg';
 import {Link} from 'react-router-dom';
+import {NAVIGATION} from '../misc/constant';
 
 function Header() {
 	return (
@@ -9,8 +10,8 @@ function Header() {
 			<nav>
 				<ul>
 					{
-						['Home', 'About', 'Menu', 'Reservations', 'Order Online', 'Login'].map(
-							menu => <li><Link to={'/reservations'}>{menu}</Link></li>
+						NAVIGATION.map(
+							menu => <li key={menu.id}><Link to={menu.link}>{menu.label}</Link></li>
 						)
 					}
 				</ul>
