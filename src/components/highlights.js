@@ -12,8 +12,8 @@ function Highlights() {
 				</div>
 			</div>
 			<div className="cards">
-				{ ['', '', ''].map(() =>
-					<div className="card">
+				{ ['', '', ''].map((_, index) =>
+					<div className="card" key={index}>
 						<img src={greekSalad} alt="greet salad"/>
 						<div className="card-header"> <span>
                                     Greek Salad
