@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import '../styles/reservations.css';
 
-const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 function Reservations({availableTimes, dispatch}) {
 	const [fname, setFName] = useState('');
 	const [lname, setLName] = useState('');
@@ -46,7 +45,7 @@ function Reservations({availableTimes, dispatch}) {
 						value={date}
 						onChange={({target: {value}}) =>  {
 							setDate(value);
-							dispatch({day: weekday[new Date(value).getDay()]})
+							dispatch({day: value})
 						}}
 						type="date" id="date" placeholder="Select Date" required/>
 					<label htmlFor="time">Select Time:</label>

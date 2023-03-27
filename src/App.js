@@ -4,19 +4,14 @@ import Layout from './components/layout';
 import Homepage from './components/homepage';
 import Reservations from './components/reservations';
 import {useReducer} from 'react';
+import {fetchAPI} from './api/bookingApi';
 
-const time = ['6:00 PM', '7:00 PM', '8:00 PM', '9:00 PM', '10:00 PM'];
-const availableTimes ={Monday: time, Tuesday: [...time].splice(1, 4), Wednesday: time,
-    Thursday: time, Friday: time,
-    Saturday: time,
-    Sunday: time
-};
 const reducer = (state, action) => {
-    return availableTimes[action.day]
+    return fetchAPI(new Date(action.day))
 }
 
 function App() {
-    const initialState = time;
+    const initialState = [];
     const [state, dispatch] = useReducer(reducer, initialState);
     return (
         <BrowserRouter>
