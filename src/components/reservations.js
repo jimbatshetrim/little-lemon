@@ -1,7 +1,8 @@
 import React, {useState} from 'react';
 import '../styles/reservations.css';
 
-function Reservations(props) {
+const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+function Reservations({availableTimes, dispatch}) {
 	const [fname, setFName] = useState('');
 	const [lname, setLName] = useState('');
 	const [email, setEmail] = useState('');
@@ -43,16 +44,19 @@ function Reservations(props) {
 					<label htmlFor="date">Select Date:</label>
 					<input
 						value={date}
-						onChange={(e) => setDate(e.target.value)}
+						onChange={({target: {value}}) =>  {
+							setDate(value);
+							dispatch({day: weekday[new Date(value).getDay()]})
+						}}
 						type="date" id="date" placeholder="Select Date" required/>
 					<label htmlFor="time">Select Time:</label>
 					<select
 						value={time}
 						onChange={(e) => setTime(e.target.value)}
 						id="time" required>
-						<option>
-							12:00pm
-						</option>
+						{
+							availableTimes?.map(time => <option key={time}>{time}</option>)
+						}
 					</select>
 				</div>
 				<div className="form-container">
