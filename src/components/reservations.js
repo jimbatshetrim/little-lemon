@@ -19,7 +19,7 @@ function Reservations(props) {
 					<label htmlFor="fname">First Name:</label>
 					<input
 						value={fname}
-						onChange={(e) => setFName(e.target.value)}
+						onChange={({target: {value}}) => setFName(value)}
 						type="text" id="fname" placeholder="First Name" required/>
 					<label htmlFor="lname">Last Name:</label>
 					<input
