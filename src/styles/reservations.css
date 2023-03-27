@@ -1,0 +1,21 @@
+.reservation-form {
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    border: 1rem solid #EDEFEE;
+    border-radius: 0.5rem;
+}
+
+label {
+    margin: 10px;
+}
+
+.form-container {
+    display: flex;
+    margin: 2rem 2rem;
+    justify-content: center;
+}
+
+input, select, textarea{
+    border-radius: 5px;
+}
