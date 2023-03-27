@@ -1,36 +1,67 @@
-import React from 'react';
+import React, {useState} from 'react';
 import '../styles/reservations.css';
 
 function Reservations(props) {
+	const [fname, setFName] = useState('');
+	const [lname, setLName] = useState('');
+	const [email, setEmail] = useState('');
+	const [phone, setPhone] = useState('');
+	const [date, setDate] = useState('');
+	const [time, setTime] = useState('');
+	const [people, setPeople] = useState('');
+	const [comments, setComments] = useState('');
 	return (
 		<>
 			<h1>Reserve A Table</h1>
 			<form className="reservation-form">
 				<div className="form-container">
 					<label htmlFor="fname">First Name:</label>
-					<input type="text" id="fname" placeholder="First Name" required/>
+					<input
+						value={fname}
+						onChange={(e) => setFName(e.target.value)}
+						type="text" id="fname" placeholder="First Name" required/>
 					<label htmlFor="lname">Last Name:</label>
-					<input type="text" id="lname" placeholder="Last Name" required/>
+					<input
+						value={lname}
+						onChange={(e) => setLName(e.target.value)}
+						type="text" id="lname" placeholder="Last Name" required/>
 				</div>
 				<div className="form-container">
 					<label htmlFor="email">Email:</label>
-					<input type="email" id="email" placeholder="Email" required/>
+					<input
+						value={email}
+						onChange={(e) => setEmail(e.target.value)}
+						type="email" id="email" placeholder="Email" required/>
 					<label htmlFor="phone">Phone:</label>
-					<input type="tel" id="phone" placeholder="(xxx)-xxx-xxxx" required/>
+					<input
+						value={phone}
+						onChange={(e) => setPhone(e.target.value)}
+						type="tel" id="phone" placeholder="(xxx)-xxx-xxxx" required/>
 				</div>
 				<div className="form-container">
 					<label htmlFor="date">Select Date:</label>
-					<input type="date" id="date" placeholder="Select Date" required/>
+					<input
+						value={date}
+						onChange={(e) => setDate(e.target.value)}
+						type="date" id="date" placeholder="Select Date" required/>
 					<label htmlFor="time">Select Time:</label>
-					<select id="time" required>
-						12:00pm
+					<select
+						value={time}
+						onChange={(e) => setTime(e.target.value)}
+						id="time" required>
+						<option>
+							12:00pm
+						</option>
 					</select>
 				</div>
 				<div className="form-container">
 					<label htmlFor="partyCount">No. of People:</label>
 					<input type="number" id="partyCount" placeholder="No. of people" required/>
 					<label htmlFor="preferences">Seating preferences:</label>
-					<select id="preferences">
+					<select
+						value={people}
+						onChange={(e) => setPeople(e.target.value)}
+						id="preferences">
 						<option>None</option>
 						<option>Indoors</option>
 						<option>Outdoor (Patio)</option>
@@ -40,11 +71,21 @@ function Reservations(props) {
 				<div className="form-container">
 					<label htmlFor="comments">Additional Comments:</label>
 					<textarea
+						value={comments}
+						onChange={e => setComments(e.target.value)}
 						id="comments"
 						rows={8}
 						cols={50}
 						placeholder="Additional Comments"
 					></textarea>
+				</div>
+				<div className="form-container">
+					<small>
+						<p>
+							Note: You cannot edit your reservation after submission. Please
+							double-check your answer before submitting your reservation request.
+						</p>
+					</small>
 				</div>
 				<div className="form-container">
 					<button type="button">Clear</button>
