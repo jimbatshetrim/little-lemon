@@ -8,7 +8,8 @@ function Reservations(props) {
 	const [phone, setPhone] = useState('');
 	const [date, setDate] = useState('');
 	const [time, setTime] = useState('');
-	const [people, setPeople] = useState('');
+	const [people, setPeople] = useState(1);
+	const [preference, setPreference] = useState('');
 	const [comments, setComments] = useState('');
 	return (
 		<>
@@ -56,11 +57,15 @@ function Reservations(props) {
 				</div>
 				<div className="form-container">
 					<label htmlFor="partyCount">No. of People:</label>
-					<input type="number" id="partyCount" placeholder="No. of people" required/>
+					<input
+						value={people}
+						type="number"
+						onChange={(e) => setPeople(+e.target.value)}
+						id="partyCount" placeholder="No. of people" required/>
 					<label htmlFor="preferences">Seating preferences:</label>
 					<select
-						value={people}
-						onChange={(e) => setPeople(e.target.value)}
+						value={preference}
+						onChange={(e) => setPreference(e.target.value)}
 						id="preferences">
 						<option>None</option>
 						<option>Indoors</option>
