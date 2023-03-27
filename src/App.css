@@ -76,8 +76,7 @@ li a {
 
 .cards {
     display: flex;
-    justify-content: center;
-    gap: 3rem;
+    justify-content: center; gap: 3rem;
     padding-top: 2rem;
 }
 
@@ -166,3 +165,27 @@ footer img {
     padding: .3rem;
 }
 
+.confirmation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: .5rem solid #495E57;
+    border-radius: .5rem;
+    background-color: #EDEFEE;
+    margin: 4rem;
+    min-height: 60vh;
+}
+
+.navigation-button {
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-button button {
+    margin: 0 2rem;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    background-color: #F4CE14;
+    border-radius: 1rem;
+    border: none;
+}
