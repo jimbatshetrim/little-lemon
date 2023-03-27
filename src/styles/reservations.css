@@ -6,8 +6,24 @@
     border-radius: 0.5rem;
 }
 
+h1 {
+    display: flex;
+    justify-content: center;
+    text-decoration-line: underline;
+    color: #495E57;
+}
+
 label {
     margin: 10px;
+}
+
+.form-container > button {
+    margin: 0 2rem;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    background-color: #F4CE14;
+    border-radius: 1rem;
+    border: none;
 }
 
 .form-container {
