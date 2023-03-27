@@ -5,6 +5,7 @@ import Homepage from './components/homepage';
 import Reservations from './components/reservations';
 import {useReducer} from 'react';
 import {fetchAPI} from './api/bookingApi';
+import ConfirmedBooking from './components/ConfirmedBooking';
 
 const reducer = (state, action) => {
     return fetchAPI(new Date(action.day))
@@ -19,6 +20,7 @@ function App() {
                 <Route path="/" element={<Layout/>}>
                     <Route index element={<Homepage/>}/>
                     <Route path="/reservations" element={<Reservations availableTimes={state} dispatch={dispatch}/>}/>
+                    <Route path="/confirmationPage" element={<ConfirmedBooking/>}/>
                 </Route>
             </Routes>
         </BrowserRouter>

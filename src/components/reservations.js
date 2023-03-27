@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import '../styles/reservations.css';
+import {submitAPI} from '../api/bookingApi';
+import {useNavigate} from 'react-router-dom';
 
 function Reservations({availableTimes, dispatch}) {
 	const [fname, setFName] = useState('');
@@ -11,10 +13,18 @@ function Reservations({availableTimes, dispatch}) {
 	const [people, setPeople] = useState(1);
 	const [preference, setPreference] = useState('');
 	const [comments, setComments] = useState('');
+	const navigation = useNavigate();
+
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		const submitted = submitAPI({fname, lname, email, phone, date, time, people, preference, comments})
+		submitted && navigation('/confirmationPage')
+	}
+
 	return (
 		<>
 			<h1>Reserve A Table</h1>
-			<form className="reservation-form">
+			<form className="reservation-form" onSubmit={handleSubmit}>
 				<div className="form-container">
 					<label htmlFor="fname">First Name:</label>
 					<input
